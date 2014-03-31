@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Waiting For USB Device</string>
+    <string name="app_name">ArduinoControl</string>
+    <string name="send_text">Send</string>
+    <string name="send_button_text">Send</string>
+
+</resources>

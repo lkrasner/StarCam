@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/demoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <ScrollView
+        android:id="@+id/demoScroller"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.94"
+        android:gravity="bottom" >
+
+        <TextView
+            android:id="@+id/demoText"
+            android:layout_width="match_parent"
+            android:layout_height="642dp"
+            android:layout_gravity="bottom"
+            android:typeface="monospace" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/send"
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:gravity="bottom" >
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:textOff="Alignment"
+            android:textOn="Camera" />
+
+        <Button
+            android:id="@+id/downButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggleButton"
+            android:layout_centerHorizontal="true"
+            android:text="Down" />
+
+        <Button
+            android:id="@+id/upButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/toggleButton"
+            android:layout_centerHorizontal="true"
+            android:text="Up" />
+
+        <Button
+            android:id="@+id/rightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/toggleButton"
+            android:layout_alignBottom="@+id/toggleButton"
+            android:layout_toRightOf="@+id/toggleButton"
+            android:text="Right" />
+
+        <Button
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/toggleButton"
+            android:layout_alignBottom="@+id/toggleButton"
+            android:layout_toLeftOf="@+id/toggleButton"
+            android:text="Left" />
+
+        <ToggleButton
+            android:id="@+id/powerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/leftButton"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="50dp"
+            android:text="ToggleButton"
+            android:textOff="Power OFF"
+            android:textOn="Power ON" />
+
+        <ToggleButton
+            android:id="@+id/trackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rightButton"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:text="ToggleButton"
+            android:textOff="Tracking OFF"
+            android:textOn="Tracking ON" />
+
+    </RelativeLayout>
+
+</LinearLayout>
