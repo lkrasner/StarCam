@@ -11,45 +11,33 @@
 package com.lkrasner.usbserial;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import android.app.ActionBar;
-import android.app.ActionBar.Tab;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.hardware.usb.UsbManager;
-import android.location.Location;
-import android.location.LocationListener;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.lkrasner.arduinocontrol.R;
 import com.lkrasner.usbserial.driver.UsbSerialDriver;
 import com.lkrasner.usbserial.driver.UsbSerialProber;
 import com.lkrasner.usbserial.util.SerialInputOutputManager;
-import android.hardware.GeomagneticField;
 
 /**
- * A simple usb serial controller for an arduino based star tracking camera
+ * A simple usb serial controller for an arduino based star tracking camera mount
  * 
- * @author Luke Krasner (luke.krasner@gmail.com)
+ * @author Luke Krasner (luke@lukekrasner.com)
+ * 
+ * Contains very poor error handling, as this is not meant to be any kind of production-level application.
+ * For example, the app will crash if you try to send data with out the usb connection working.
  */
 
 public class SerialTerminal extends Activity {
@@ -117,7 +105,7 @@ public class SerialTerminal extends Activity {
             };
 
     @Override
-    public void onCreate(Bundle savedInstanceState) { //oncreate, define my buttons and shit
+    public void onCreate(Bundle savedInstanceState) { //oncreate, define my buttons and stuff
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         bytes = new byte[3];
@@ -265,7 +253,7 @@ public class SerialTerminal extends Activity {
  * (non-Javadoc)
  * @see android.app.Activity#onResume()
  * 
- * a bunch of needed stuff for initializing the device and stuff.  yes, and stuff, deal with it, don't change it.
+ * a bunch of needed stuff for initializing the device and stuff.  yes, and stuff, deal with it, and don't change it don't change it.
  */
     @Override
     protected void onResume() {
@@ -332,7 +320,7 @@ public class SerialTerminal extends Activity {
         }
 
         catch (IOException e) {
-            ///suck my dick, java
+            //Java makes me do this.  It is 3 AM.  I give 0 shits if this app crashes here.
         }
 
     }
